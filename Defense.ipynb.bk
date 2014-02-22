@@ -2,7 +2,7 @@
  "metadata": {
   "celltoolbar": "Slideshow",
   "name": "",
-  "signature": "sha256:141737e72487af238833a7d6830dda9418c2a088e1df879a7b6642106c05063c"
+  "signature": "sha256:a9f130785649a0895363772ae41f9ef0034383642772d54b8fac165b12d7528f"
  },
  "nbformat": 3,
  "nbformat_minor": 0,
@@ -22,7 +22,7 @@
       }
      },
      "outputs": [],
-     "prompt_number": 1
+     "prompt_number": 3
     },
     {
      "cell_type": "heading",
@@ -296,11 +296,11 @@
      "level": 1,
      "metadata": {
       "slideshow": {
-       "slide_type": "slide"
+       "slide_type": "subslide"
       }
      },
      "source": [
-      "Diseases"
+      "<font color=\"red\">Diseases</font>"
      ]
     },
     {
@@ -311,7 +311,7 @@
       }
      },
      "source": [
-      "transmitted through the act of feeding on our blood"
+      "transmitted through the act of feeding on our <font color=\"red\">blood<font>."
      ]
     },
     {
@@ -335,15 +335,7 @@
       }
      },
      "source": [
-      "a fancy name for feeding on blood"
-     ]
-    },
-    {
-     "cell_type": "heading",
-     "level": 3,
-     "metadata": {},
-     "source": [
-      "a trait hypothesized to be ancestral to the mosquito clade"
+      "this is how mosquitoes infect us with most pathogens"
      ]
     },
     {
@@ -411,22 +403,6 @@
      },
      "source": [
       "### 5. Infectious mosquito bites an uninfected person and the pathogen in transfered in her saliva."
-     ]
-    },
-    {
-     "cell_type": "markdown",
-     "metadata": {
-      "slideshow": {
-       "slide_type": "subslide"
-      }
-     },
-     "source": [
-      "<figure>\n",
-      "<center>\n",
-      "<img src=\"general_files/mosqXsection.png\" width=\"900\" />\n",
-      "<figcaption> Cross section of a female mosquito with tissues important to the transmission cycle highlighted.</figcaption>\n",
-      "</center>\n",
-      "</figure>"
      ]
     },
     {
