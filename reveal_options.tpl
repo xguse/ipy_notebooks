@@ -54,7 +54,7 @@ Reveal.initialize({
     //backgroundTransition: 'default', // default/linear/none
 
     // Theme
-    theme: 'simple' // available themes are in /css/theme
+    theme: 'solarized' // available themes are in /css/theme
 
 });
 
