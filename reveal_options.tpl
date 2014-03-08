@@ -54,7 +54,18 @@ Reveal.initialize({
     //backgroundTransition: 'default', // default/linear/none
 
     // Theme
-    theme: 'solarized' // available themes are in /css/theme
+    theme: 'night', // available themes are in /css/theme
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    //width: "90%",
+    //height: "90%",
+
+    //width: 1100,
+    //height: "90%",
+
+    maxScale: 1.5,
 
 });
 

@@ -1,0 +1,64 @@
+/*Some css fixes to use night theme with IPython slides*/
+body {
+background-color: #111111;
+}
+.reveal p {
+color: white;
+}
+.reveal figcaption {
+color: white;
+}
+.reveal ul, ol {
+color: white;
+}
+div.output_area pre {
+color: white;
+}
+div.output_stderr {
+background: #F00;
+}
+.reveal table th, .reveal table td {
+color: white;
+}
+
+.reveal .slides section .fragment.highlight-red,
+.reveal .slides section .fragment.highlight-current-red,
+.reveal .slides section .fragment.highlight-green,
+.reveal .slides section .fragment.highlight-current-green,
+.reveal .slides section .fragment.highlight-blue,
+.reveal .slides section .fragment.highlight-current-blue {
+	opacity: 1;
+}
+	.reveal .slides section .fragment.highlight-red.visible {
+		color: #ff2c2d
+	}
+	.reveal .slides section .fragment.highlight-green.visible {
+		color: #17ff2e;
+	}
+	.reveal .slides section .fragment.highlight-blue.visible {
+		color: #1b91ff;
+	}
+
+.reveal .slides section .fragment.highlight-current-red.current-fragment {
+	color: #ff2c2d
+}
+.reveal .slides section .fragment.highlight-current-green.current-fragment {
+	color: #17ff2e;
+}
+.reveal .slides section .fragment.highlight-current-blue.current-fragment {
+	color: #1b91ff;
+}
+
+
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+#page-wrap { width: 660px; margin: 60px auto; }
+
+.image-gallery { margin: 20px 0 25px 0; }
+
+figure:focus {
+  outline: none;
+  -webkit-transform: rotate(-3deg) scale(2.5); -moz-transform: rotate(-3deg) scale(2.5);
+   -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
+  z-index: 9999;
+}

@@ -1,0 +1,44 @@
+[x] Must be another way to find imprt CRE/Ms
+## Approach
+	
+[x] What is our immediate GOAL?
+	[x] Establish a method for grouping promoters for future CRE/CRM discovery 
+[x] How can we limit the noise?
+	[x] Focus on expression profiles related to blood feeding in the midgut
+	[x] Leverage the hypothesized shared ancestry of Hematophagy
+	[x] Presence of similar sets of KNOWN CRE patterns in promoter regions
+	[x] Group genes based on predicted functional overlap
+[x]We need a way to evaluate results
+	[x] hold back the use of functional overlap analysis for evaluating groupings of promoters/genes
+
+# experimiental set up
+	[x] Time points
+	[x] Gene expression profiles using RNA-seq
+	[x] ran into problems with 2h in Ag and Cq
+
+# RNA-seq analysis pipeline
+	[x] blacktie and associated figures
+
+# How to go from three species worth of genome-scale expression patterns to a sets of meaningfully grouped promoters in an automated and repeatable fashion?
+	[x] Figure 3.1
+	[x] walkthrough
+
+# Preliminary Data
+	[x] Phylogenetics 
+	[x] Comparative Genetics
+	[_] Comparative Transcriptomics
+	[_] Putative regulatory Mechanisms (KNOWN CRE patterns)
+
+# gFunc Process
+	[_] what is gFunc
+		[_] graph model used for this project
+	[_] What is PTCI
+	[_] How are FDRs established
+	[_] what is produced
+
+# Characterization of results
+	[_] k-means clustering of Ag mAPs
+	[_] functional annotation of the gene list produced in the gFunc stage
+
+# Evaluation of gene-sets produced
+	[_] Do the gene-sets contain functional annotations consistent with what is known about the bloodfed midgut?
