@@ -50,15 +50,3 @@ color: white;
 }
 
 
-.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-
-#page-wrap { width: 660px; margin: 60px auto; }
-
-.image-gallery { margin: 20px 0 25px 0; }
-
-figure:focus {
-  outline: none;
-  -webkit-transform: rotate(-3deg) scale(2.5); -moz-transform: rotate(-3deg) scale(2.5);
-   -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
-  z-index: 9999;
-}
