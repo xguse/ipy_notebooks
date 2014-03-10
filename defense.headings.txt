@@ -26,19 +26,33 @@
 # Preliminary Data
 	[x] Phylogenetics 
 	[x] Comparative Genetics
-	[_] Comparative Transcriptomics
-	[_] Putative regulatory Mechanisms (KNOWN CRE patterns)
+	[x] Comparative Transcriptomics
+	[x] Putative regulatory Mechanisms (KNOWN CRE patterns)
 
 # gFunc Process
-	[_] what is gFunc
-		[_] graph model used for this project
-	[_] What is PTCI
-	[_] How are FDRs established
-	[_] what is produced
+	[x] what is gFunc
+		[x] graph model used for this project
+	[x] What is PTCI
+	[x] How are FDRs established
+	[x] what is produced
+	[x] fill in numbers/data
 
 # Characterization of results
-	[_] k-means clustering of Ag mAPs
-	[_] functional annotation of the gene list produced in the gFunc stage
+	[x] k-means clustering of Ag mAPs
+	[x] functional annotation of the gene list produced in the gFunc stage
+
+### !!!!!!!! FIX FRAGMENT SLIDE ISSUE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Clusters: mAPs
+	[_] show Ag 4 clusters
+	[_] highlight how the other species stack up for one cluster
+
+# clusters: functional descriptions
+
+# conclusions
+
+# future work
+
 
 # Evaluation of gene-sets produced
 	[_] Do the gene-sets contain functional annotations consistent with what is known about the bloodfed midgut?

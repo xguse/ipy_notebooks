@@ -1,0 +1,31 @@
+
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/upAt4_gene_profiles_from_cummerbund/Aa_upAt4_cls22_Ag_target_FPKMs_vb_orthos.pdf Aa_upAt4_cls22_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/upAt4_gene_profiles_from_cummerbund/Ag_upAt4_cls22_Ag_target_FPKMs_vb_orthos.pdf Ag_upAt4_cls22_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/upAt4_gene_profiles_from_cummerbund/Cq_upAt4_cls22_Ag_target_FPKMs_vb_orthos.pdf Cq_upAt4_cls22_Ag_target_FPKMs_vb_orthos.svg
+
+################
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/upAfter4_gene_profiles_from_cummerbund/Aa_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.pdf Aa_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/upAfter4_gene_profiles_from_cummerbund/Ag_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.pdf Ag_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/upAfter4_gene_profiles_from_cummerbund/Cq_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.pdf Cq_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg
+
+#####################
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/downAt4_gene_profiles_from_cummerbund/Aa_downAt4_cls16_Ag_target_FPKMs_vb_orthos.pdf Aa_downAt4_cls16_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/downAt4_gene_profiles_from_cummerbund/Ag_downAt4_cls16_Ag_target_FPKMs_vb_orthos.pdf Ag_downAt4_cls16_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/downAt4_gene_profiles_from_cummerbund/Cq_downAt4_cls16_Ag_target_FPKMs_vb_orthos.pdf Cq_downAt4_cls16_Ag_target_FPKMs_vb_orthos.svg
+
+#####################
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/downAfter4_gene_profiles_from_cummerbund/Aa_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.pdf Aa_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/downAfter4_gene_profiles_from_cummerbund/Ag_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.pdf Ag_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.svg
+
+pdf2svg /home/gus/Dropbox/repos/git/uci-thesis-latex/figures/figs/ecr_and_insects_ptci_20130918_orthodb7/downAfter4_gene_profiles_from_cummerbund/Cq_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.pdf Cq_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.svg

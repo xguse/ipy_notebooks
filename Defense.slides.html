@@ -1704,7 +1704,7 @@ div.output_prompt {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3347,6 +3347,17 @@ In&nbsp;[3]:
 </div>
 </div>
 </div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="RNA-seq-as-described-before"><a href="#/15/1">RNA-seq as described before</a><a class="anchor-link" href="#RNA-seq-as-described-before">&#182;</a></h2>
+</div>
+</div>
+</div>
 </section>
     </section><section>
     <section>
@@ -3360,7 +3371,1165 @@ In&nbsp;[3]:
 </div>
 </div>
 </div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="correlation-of-a-CRE-scanning-signature-between-ortholog-pairs">correlation of a CRE <font color="#5791ED">scanning signature</font> between ortholog pairs<a class="anchor-link" href="#correlation-of-a-CRE-scanning-signature-between-ortholog-pairs">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>scanning signature:</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>for a set of defined CRE motif models...</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>record all regions of a promoter that <a href="#/general_files/defense_talk/mast.html">fit a given CRE model</a> better than expected given the background sequences</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>weight each site by its positive log odds score</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>sum the weighted sites for each CRE model in a single promoter sequence</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>this gives each gene&#39;s promoter a vector of the counts for each CRE model <font color="#5791ED">weighted by the quality</font> of each site (<font color="#5791ED">scanning signature</font>)</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>pairs of promoter <font color="#5791ED">scanning signatures</font> can be compared to generate a score representing the similarity of the CRE make-up of the two</li>
+</ul>
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="gFunc-based-comparative-analysis"><font color="#A86E12">gFunc-based comparative analysis</font><a class="anchor-link" href="#gFunc-based-comparative-analysis">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="gFunc:-graph-based-functional-genomics-framework"><font color="#5791ED">gFunc:</font> <font color="#A86E12">g</font>raph-based <font color="#A86E12">func</font>tional genomics framework<a class="anchor-link" href="#gFunc:-graph-based-functional-genomics-framework">&#182;</a></h2>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="based-on-an-existing,-well-maintained-network-graph-framework-called-networkx">based on an existing, well maintained network-graph framework called <code>networkx</code><a class="anchor-link" href="#based-on-an-existing,-well-maintained-network-graph-framework-called-networkx">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="uses-networkx-as-a-graph-database-backbone">uses <code>networkx</code> as a graph-database backbone<a class="anchor-link" href="#uses-networkx-as-a-graph-database-backbone">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="gFunc-provides-code-for-installing-common-genomic-data-types-into-the-graph-structure"><font color="#5791ED">gFunc</font> provides code for installing common genomic data-types into the graph structure<a class="anchor-link" href="#gFunc-provides-code-for-installing-common-genomic-data-types-into-the-graph-structure">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="a-convention-for-adding-new-data-types">a convention for adding new data-types<a class="anchor-link" href="#a-convention-for-adding-new-data-types">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="not-formally-released-yet">not formally released yet<a class="anchor-link" href="#not-formally-released-yet">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-graph-model"><font color="#A86E12">The graph model</font><a class="anchor-link" href="#The-graph-model">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="based-on-the-3-way,-1:1-ortholog-relationships">based on the 3-way, 1:1 ortholog-relationships<a class="anchor-link" href="#based-on-the-3-way,-1:1-ortholog-relationships">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/ortho-graph-model.svg" width="600" />
+<figcaption> Graph model of 3-way, 1:1 ortholog-relationships.</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/ortho-graph-node-data.svg" width="600" />
+<figcaption> Data stored in the nodes.</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/ortho-graph-edge-data.svg" width="600" />
+<figcaption> Data stored in the edges.</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Phylogenetic-Transcriptional-Correlation-Index"><font color="#A86E12">The Phylogenetic Transcriptional Correlation Index</font><a class="anchor-link" href="#The-Phylogenetic-Transcriptional-Correlation-Index">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="-$\mathrm{PTCI}-=-\left(-r_{x}-+-\frac{r_{t}}{2}-\right)-\cdot-w(d)$-"><center> $\mathrm{PTCI} = \left( r_{x} + \frac{r_{t}}{2} \right) \cdot w(d)$ </center><a class="anchor-link" href="#-$\mathrm{PTCI}-=-\left(-r_{x}-+-\frac{r_{t}}{2}-\right)-\cdot-w(d)$-">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>attempts to provide a metric that</p>
+<ul>
+<li>combines multiple pairwise Pearson correlation coefficients (<font color="#5791ED">$r$</font>)<ul>
+<li>relating to multiple comparison dimensions for each ortholog-pair </li>
+<li>$r_{x}$ is correlation of <font color="#5791ED">mAPs</font></li>
+<li>$r_{t}$ is correlation of <font color="#5791ED">CRE scanning signatures</font></li>
+</ul>
+</li>
+<li>weights it by the relative evolutionary divergence times of each pairwise comparison (<font color="#5791ED">$d$</font>)</li>
+<li><font color="#5791ED">$w$</font> is a scaling function that scales <font color="#5791ED">$d$</font> from millions of years to between $1.0$ and $1.1$</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><font color="#5791ED">1 - 1.0</font> used to allow the evolutionary distance to <font color="#5791ED">affect the ranking</font> of an ortholog-set without having a <font color="#5791ED">dominating effect</font>.</li>
+<li>I explored other constraint settings, but this range appeared to be a good compromise (not shown).</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<img src="general_files/defense_talk/thesis-xprn-tfbs.svg" width="500"  />
 
+
+<img src="general_files/defense_talk/thesis-xprn-scaled-tfbs.svg" width="500"  />
+</center>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/ortho-graph-ptci.svg" width="600" />
+<figcaption> PTCI example.</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="gFunc-mediated-filtering-of-ortholog-sets"><font color="#A86E12">gFunc mediated filtering of ortholog sets</font><a class="anchor-link" href="#gFunc-mediated-filtering-of-ortholog-sets">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Big-picture-again"><a href="#/13/1">Big picture again</a><a class="anchor-link" href="#Big-picture-again">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Three-step-process:">Three step process:<a class="anchor-link" href="#Three-step-process:">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.--PTCI-calculations-for-all-3-way-ortholog-sets">1.  PTCI calculations for all 3-way ortholog sets<a class="anchor-link" href="#1.--PTCI-calculations-for-all-3-way-ortholog-sets">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Estimate-a-false-discovery-rate-(FDR)-by-recalculating-the-PTCI-many-times-with-randomly-assigned-3-way-ortholog-memberships">2. Estimate a false discovery rate (<font color="#5791ED">FDR</font>) by recalculating the PTCI many times with randomly assigned 3-way ortholog memberships<a class="anchor-link" href="#2.-Estimate-a-false-discovery-rate-(FDR)-by-recalculating-the-PTCI-many-times-with-randomly-assigned-3-way-ortholog-memberships">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-Retain-3-way-orthologs-with-combined-PTCI-greater-than-or-equal-to-FDR-threshold">3. Retain 3-way orthologs with combined PTCI greater than or equal to FDR threshold<a class="anchor-link" href="#3.-Retain-3-way-orthologs-with-combined-PTCI-greater-than-or-equal-to-FDR-threshold">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ortholog-sets-were-filtered-using-two-CRE-model-sets.">Ortholog sets were filtered using <font color="#5791ED">two</font> CRE model sets.<a class="anchor-link" href="#Ortholog-sets-were-filtered-using-two-CRE-model-sets.">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="a-general-set-of-126-insect-CRE-models">a <font color="#5791ED">general set</font> of 126 insect CRE models<a class="anchor-link" href="#a-general-set-of-126-insect-CRE-models">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="a-focused-set-of-12-CRE-models">a <font color="#5791ED">focused set</font> of 12 CRE models<a class="anchor-link" href="#a-focused-set-of-12-CRE-models">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="linked-to-the-ecdysone-(20E)-regulatory-program-which-is-involved-in-transcriptional-changes-resulting-from-bloodfeeding">linked to the ecdysone (<font color="#5791ED">20E</font>) regulatory program which is involved in transcriptional changes resulting from bloodfeeding<a class="anchor-link" href="#linked-to-the-ecdysone-(20E)-regulatory-program-which-is-involved-in-transcriptional-changes-resulting-from-bloodfeeding">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="the-union-of-3-way-ortholog-sets-from-the-general-set-and-the-focused-set-filtering-runs-were-retained-for-further-characterization">the <font color="#5791ED">union</font> of 3-way ortholog sets from the <font color="#5791ED">general set</font> and the <font color="#5791ED">focused set</font> filtering runs were retained for further characterization<a class="anchor-link" href="#the-union-of-3-way-ortholog-sets-from-the-general-set-and-the-focused-set-filtering-runs-were-retained-for-further-characterization">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="PTCI-results-from-the-general-set"><font color="#A86E12">PTCI results from the general set</font><a class="anchor-link" href="#PTCI-results-from-the-general-set">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First-without-the-3-way-ortholog-combined-PTCI">First <font color="#5791ED">without</font> the 3-way ortholog combined PTCI<a class="anchor-link" href="#First-without-the-3-way-ortholog-combined-PTCI">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="each-pairwise-ortholog-separately">each pairwise ortholog <a href="#/20/2">separately</a><a class="anchor-link" href="#each-pairwise-ortholog-separately">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/dist_hist/ins_pairwise_ptci_hist.svg" width="600" />
+<figcaption> Pairwise PTCI distributions (<font color="#5791ED">general CRE set</font>).</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/dist_hist/ins_pairwise_ptci_cum_hist.svg" width="600" />
+<figcaption> Pairwise PTCI cummulative distributions (<font color="#5791ED">general CRE set</font>).</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/dist_hist/ins_pairwise_ptci_fdr.svg" width="600" />
+<figcaption> Pairwise PTCI vs FDR  (<font color="#5791ED">general CRE set</font>).</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Now-what-do-we-get-when-we-incorperate-the-3-way-ortholog-relationship?">Now what do we get when we incorperate the 3-way ortholog relationship?<a class="anchor-link" href="#Now-what-do-we-get-when-we-incorperate-the-3-way-ortholog-relationship?">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/dist_hist/ins_mean_ptci_fdr.svg" width="600" />
+<figcaption> Combined PTCI vs FDR  (<font color="#5791ED">general CRE set</font>).</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="PTCI-results-from-the-focused-set"><font color="#A86E12">PTCI results from the focused set</font><a class="anchor-link" href="#PTCI-results-from-the-focused-set">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/dist_hist/ecr_pairwise_ptci_fdr.svg" width="600" />
+<figcaption> Pairwise PTCI vs FDR  (<font color="#5791ED">focused CRE set</font>).</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/dist_hist/ecr_mean_ptci_fdr.svg" width="600" />
+<figcaption> Combined PTCI vs FDR  (<font color="#5791ED">focused CRE set</font>).</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-combined-PTCI-threshold-of-0.95-was-used-as-the-filter-threshold-in-both-the-general-and-focused-runs">A combined PTCI threshold of 0.95 was used as the filter threshold in both the <font color="#5791ED">general</font> and <font color="#5791ED">focused</font> runs<a class="anchor-link" href="#A-combined-PTCI-threshold-of-0.95-was-used-as-the-filter-threshold-in-both-the-general-and-focused-runs">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="In-both-cases-it-resulted-in-an-FDR-of-~15%">In both cases it resulted in an FDR of <font color="#5791ED">~15%</font><a class="anchor-link" href="#In-both-cases-it-resulted-in-an-FDR-of-~15%">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="666-genes-were-retained-for-the-general-set"><font color="#5791ED">666</font> genes were retained for the <font color="#5791ED">general set</font><a class="anchor-link" href="#666-genes-were-retained-for-the-general-set">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="708-genes-were-retained-for-the-focused-set"><font color="#5791ED">708</font> genes were retained for the <font color="#5791ED">focused set</font><a class="anchor-link" href="#708-genes-were-retained-for-the-focused-set">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="the-union-of-the-two-sets-contained-930-genes">the <font color="#5791ED">union</font> of the two sets contained <font color="#5791ED">930</font> genes<a class="anchor-link" href="#the-union-of-the-two-sets-contained-930-genes">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="310-from-each-species">310 from each species<a class="anchor-link" href="#310-from-each-species">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="the-intersection-(overlap)-contained-444">the <font color="#5791ED">intersection</font> (overlap) contained <font color="#5791ED">444</font><a class="anchor-link" href="#the-intersection-(overlap)-contained-444">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="66%-of-the-genes-retained-from-the-general-run">66% of the genes retained from the <font color="#5791ED">general</font> run<a class="anchor-link" href="#66%-of-the-genes-retained-from-the-general-run">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="63%-of-the-genes-retained-from-the-focused-run">63% of the genes retained from the <font color="#5791ED">focused</font> run<a class="anchor-link" href="#63%-of-the-genes-retained-from-the-focused-run">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="common-to-both">common to <font color="#5791ED">both</font><a class="anchor-link" href="#common-to-both">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Characterization-of-results-stage"><font color="#A86E12">Characterization of results stage</font><a class="anchor-link" href="#Characterization-of-results-stage">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Big-picture-again"><a href="#/13/1">Big picture again</a><a class="anchor-link" href="#Big-picture-again">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Functional-annotation-of-the-930-genes-in-the-union"><font color="#A86E12">Functional annotation of the 930 genes in the union</font><a class="anchor-link" href="#Functional-annotation-of-the-930-genes-in-the-union">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-might-these-genes-actually-do?">What might these genes <font color="#5791ED">actually do</font>?<a class="anchor-link" href="#What-might-these-genes-actually-do?">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Disclaimer..."><font color="#5791ED">Disclaimer...</font><a class="anchor-link" href="#Disclaimer...">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Very-few-mosquito-genes-have-been-experimentally-validated-with-respect-to-molecular-function"><font color="#5791ED">Very few</font> mosquito genes have been experimentally validated with respect to molecular function<a class="anchor-link" href="#Very-few-mosquito-genes-have-been-experimentally-validated-with-respect-to-molecular-function">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reality-for-most-non-&quot;model&quot;-organisms">Reality for most non-"model" organisms<a class="anchor-link" href="#Reality-for-most-non-&quot;model&quot;-organisms">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="So...">So...<a class="anchor-link" href="#So...">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="We-must-infer-function-through-similarity-of-gene-protein-sequence">We must <font color="#5791ED">infer</font> function through similarity of gene protein sequence<a class="anchor-link" href="#We-must-infer-function-through-similarity-of-gene-protein-sequence">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Argot2"><font color="#A86E12">Argot<sup>2</sup></font><a class="anchor-link" href="#Argot2">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Falda <em>et al.</em> (2012). <strong>Argot2: a large scale function prediction tool relying on semantic similarity of weighted Gene Ontology terms</strong>. BMC bioinformatics </p>
+<p>doi:10.1186/1471-2105-13-S4-S14</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-process:">The process:<a class="anchor-link" href="#The-process:">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-930-protein-sequences-are-compared-to-databases-of-well-characterized-proteins...">The 930 protein sequences are compared to databases of <font color="#5791ED">well characterized</font> proteins...<a class="anchor-link" href="#The-930-protein-sequences-are-compared-to-databases-of-well-characterized-proteins...">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Our-sequences-are-compared-using-peptide-BLAST-against-the-SwissProt-protein-sequence-database">Our sequences are compared using peptide BLAST against the SwissProt <font color="#5791ED">protein sequence</font> database<a class="anchor-link" href="#Our-sequences-are-compared-using-peptide-BLAST-against-the-SwissProt-protein-sequence-database">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="annotated-by-hand-with-evidence-types-known">annotated by hand with evidence types known<a class="anchor-link" href="#annotated-by-hand-with-evidence-types-known">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="most-with-at-least-some-experimental-evidence">most with at least some experimental evidence<a class="anchor-link" href="#most-with-at-least-some-experimental-evidence">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="They-are-also-compared-using-HMMER-against-the-Pfam-database-of-functional-domains">They are also compared using HMMER against the Pfam database of <font color="#5791ED">functional domains</font><a class="anchor-link" href="#They-are-also-compared-using-HMMER-against-the-Pfam-database-of-functional-domains">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="uses-hidden-Markov-models-of-annotated-functional-domains">uses hidden Markov models of annotated functional domains<a class="anchor-link" href="#uses-hidden-Markov-models-of-annotated-functional-domains">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="built-from-many-instances-of-each-domain">built from many instances of each domain<a class="anchor-link" href="#built-from-many-instances-of-each-domain">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-results-are-sent-to-the-Argot2-servers-to-be-mapped-onto-the-Gene-Ontology-(GO)-graph-of-hierarchical-terms">The results are sent to the <font color="#5791ED">Argot<sup>2</sup></font> servers to be mapped onto the Gene Ontology (<font color="#5791ED">GO</font>) graph of hierarchical terms<a class="anchor-link" href="#The-results-are-sent-to-the-Argot2-servers-to-be-mapped-onto-the-Gene-Ontology-(GO)-graph-of-hierarchical-terms">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-each-protein,-the-GO-terms-already-associated-with-the-best-hits-from-the-well-characterized-databses-are-used-to-generate-a-total-score-(TS)-for-each-term-in-the-GO-hierarchy">For each protein, the GO terms already associated with the best hits from the well characterized databses are used to generate a total score (<font color="#5791ED">TS</font>) for each term in the GO hierarchy<a class="anchor-link" href="#For-each-protein,-the-GO-terms-already-associated-with-the-best-hits-from-the-well-characterized-databses-are-used-to-generate-a-total-score-(TS)-for-each-term-in-the-GO-hierarchy">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-hierarchy-is-then-pruned,-leaving-the-&quot;best&quot;-terms">The hierarchy is then pruned, leaving the "best" terms<a class="anchor-link" href="#The-hierarchy-is-then-pruned,-leaving-the-&quot;best&quot;-terms">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-Argot2-developers-suggest-a-TS-threshold-of-around-200">The Argot<sup>2</sup> developers suggest a TS threshold of around 200<a class="anchor-link" href="#The-Argot2-developers-suggest-a-TS-threshold-of-around-200">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Argot2-was-the-highest-performer-in-a-recent-&quot;blinded&quot;-review-of-functional-annotation-methods">Argot<sup>2</sup> was the highest performer in a recent "blinded" review of functional annotation methods<a class="anchor-link" href="#Argot2-was-the-highest-performer-in-a-recent-&quot;blinded&quot;-review-of-functional-annotation-methods">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Radivojac <em>et al.</em> (2013). <strong>A large-scale evaluation of computational protein function prediction</strong>. Nature methods, 10(3), 221–7. </p>
+<p>doi:10.1038/nmeth.2340</p>
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="760-of-930-proteins-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-200"><font color="#5791ED">760</font> of 930 proteins where assigned at least one GO term with a <font color="#5791ED">TS of at least 200</font><a class="anchor-link" href="#760-of-930-proteins-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-200">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="452-of-930-proteins-(about-half)-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-2000"><font color="#5791ED">452</font> of 930 proteins (about half) where assigned at least one GO term with a <font color="#5791ED">TS of at least 2000</font><a class="anchor-link" href="#452-of-930-proteins-(about-half)-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-2000">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Grouping-the-930-by-mAP-similarity"><font color="#A86E12">Grouping the 930 by mAP similarity</font><a class="anchor-link" href="#Grouping-the-930-by-mAP-similarity">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Big-picture-time!"><a href="#/13/1">Big picture time!</a><a class="anchor-link" href="#Big-picture-time!">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="K-means-clustering-($k=23$)-was-applied-to-the-310-genes-from-An.-gambiae">K-means clustering (<font color="#5791ED">$k=23$</font>) was applied to the 310 genes from <font color="#5791ED"><em>An. gambiae</em></font><a class="anchor-link" href="#K-means-clustering-($k=23$)-was-applied-to-the-310-genes-from-An.-gambiae">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="partition-the-3-way,-1:1-ortholog-sets-based-on-mAP-similarity.">partition the 3-way, 1:1 ortholog sets based on mAP similarity.<a class="anchor-link" href="#partition-the-3-way,-1:1-ortholog-sets-based-on-mAP-similarity.">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="approximately-equidistant-evolutionary-divergence-to-both-other-species">approximately <a href="#/15/1">equidistant evolutionary divergence</a> to both other species<a class="anchor-link" href="#approximately-equidistant-evolutionary-divergence-to-both-other-species">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<figure>
+<center>
+<img src="general_files/defense_talk/23clusters_ptci_0_95_orthodb7.svg" width="900" />
+<figcaption><em>An. gambiae</em> clustered abundance profiles.</figcaption>
+</center>
+</figure>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Clusters-4,-6,-16,-and-22-were-investigated-further">Clusters 4, 6, 16, and 22 were investigated further<a class="anchor-link" href="#Clusters-4,-6,-16,-and-22-were-investigated-further">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="the-prominant-feature-in-each-mAP-is-the-dominat-change-in-abundence-from-1-to-4h-post-bloodmeal--(PBM)">the prominant feature in each mAP is the dominat change in abundence from 1 to 4h post bloodmeal  (<font color="#5791ED">PBM</font>)<a class="anchor-link" href="#the-prominant-feature-in-each-mAP-is-the-dominat-change-in-abundence-from-1-to-4h-post-bloodmeal--(PBM)">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+    </div>
 </div>
 </div>
 
