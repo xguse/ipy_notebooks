@@ -31,11 +31,7 @@ document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.l
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 
 <style type="text/css">
-    .clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
-.clearfix:after{clear:both}
-.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
-.input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+    article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]){display:none}
 html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
@@ -889,6 +885,10 @@ a.label:hover,a.label:focus,a.badge:hover,a.badge:focus{color:#fff;text-decorati
 .show{display:block}
 .invisible{visibility:hidden}
 .affix{position:fixed}
+.clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
+.clearfix:after{clear:both}
+.hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
+.input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 @-ms-viewport{width:device-width}.hidden{display:none;visibility:hidden}
 .visible-phone{display:none !important}
 .visible-tablet{display:none !important}
@@ -1301,11 +1301,11 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
-.hbox>*{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:none}
+.hbox>*{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:auto}
 .vbox{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}
-.vbox>*{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:none}
-.reverse{-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse;flex-direction:row-reverse}
-.box-flex0{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:none;width:auto}
+.vbox>*{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:auto}
+.reverse{-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse;flex-direction:column-reverse}
+.box-flex0{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:auto}
 .box-flex1{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 .box-flex{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 .box-flex2{-webkit-box-flex:2;-moz-box-flex:2;box-flex:2;flex:2}
@@ -1314,9 +1314,9 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .start{-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start}
 .end{-webkit-box-pack:end;-moz-box-pack:end;box-pack:end;justify-content:flex-end}
 .center{-webkit-box-pack:center;-moz-box-pack:center;box-pack:center;justify-content:center}
-.align-start{-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start}
-.align-end{-webkit-box-align:end;-moz-box-align:end;box-align:end;align-items:flex-end}
-.align-center{-webkit-box-align:center;-moz-box-align:center;box-align:center;align-items:center}
+.align-start{-webkit-box-align:start;-moz-box-align:start;box-align:start;align-content:flex-start}
+.align-end{-webkit-box-align:end;-moz-box-align:end;box-align:end;align-content:flex-end}
+.align-center{-webkit-box-align:center;-moz-box-align:center;box-align:center;align-content:center}
 div.error{margin:2em;text-align:center}
 div.error>h1{font-size:500%;line-height:normal}
 div.error>p{font-size:200%;line-height:normal}
@@ -1381,17 +1381,15 @@ input.engine_num_input{width:60px}
 div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}div.cell.selected{border-radius:4px;border:thin #ababab solid}
 div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
-div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
+div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.231em}
 div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.input_prompt{color:#000080;border-top:1px solid transparent}
-div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
-.CodeMirror{line-height:1.21429em;height:auto;background:none;}
+.CodeMirror{line-height:1.231em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
+@-moz-document {.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1417,7 +1415,7 @@ pre .coffeescript .javascript,pre .javascript .xml,pre .tex .formula,pre .xml .j
 .cm-s-ipython span.cm-meta{color:#a2f}
 .cm-s-ipython span.cm-tab{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);background-position:right;background-repeat:no-repeat}
 div.output_wrapper{position:relative;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}
-div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.8);-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.8);box-shadow:inset 0 2px 8px rgba(0,0,0,0.8);display:block}
+div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.8);-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.8);box-shadow:inset 0 2px 8px rgba(0,0,0,0.8)}
 div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}
 div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:4px}
 div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;-moz-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,0.5)}
@@ -1428,7 +1426,7 @@ div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}
 div.output_area pre{font-family:monospace;margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.output_text{text-align:left;color:#000;font-family:monospace;line-height:1.21429em}
+div.output_text{text-align:left;color:#000;font-family:monospace;line-height:1.231em}
 div.output_stderr{background:#fdd;}
 div.output_latex{text-align:left}
 div.output_javascript:empty{padding:0}
@@ -1478,38 +1476,38 @@ p.p-space{margin-bottom:10px}
 .rendered_html img{display:block;margin-left:auto;margin-right:auto}
 .rendered_html *+img{margin-top:1em}
 div.text_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
+div.text_cell_input{color:#000;border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.text_cell_render{outline:none;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;color:#000}
 a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}
 h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}
 div.cell.text_cell.rendered{padding:0}
-.widget-area{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}.widget-area .widget-subarea{padding:.44em .4em .4em 1px;margin-left:6px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:2;-moz-box-flex:2;box-flex:2;flex:2;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start}
+.widget-area{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}.widget-area .widget-subarea{padding:.44em .4em .4em 1px;margin-left:6px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:2;-moz-box-flex:2;box-flex:2;flex:2}
 .widget-hlabel{min-width:10ex;padding-right:8px;padding-top:3px;text-align:right;vertical-align:text-top}
 .widget-vlabel{padding-bottom:5px;text-align:center;vertical-align:text-bottom}
 .widget-hreadout{padding-left:8px;padding-top:3px;text-align:left;vertical-align:text-top}
 .widget-vreadout{padding-top:5px;text-align:center;vertical-align:text-top}
 .slide-track{border:1px solid #ccc;background:#fff;border-radius:4px;}
-.widget-hslider{padding-left:8px;padding-right:5px;overflow:visible;width:348px;height:5px;max-height:5px;margin-top:11px;margin-bottom:10px;border:1px solid #ccc;background:#fff;border-radius:4px;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}.widget-hslider .ui-slider{border:0 !important;background:none !important;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}.widget-hslider .ui-slider .ui-slider-handle{width:14px !important;height:28px !important;margin-top:-8px !important}
+.widget-hslider{padding-left:8px;padding-right:5px;overflow:visible;width:348px;height:5px;max-height:5px;margin-top:11px;border:1px solid #ccc;background:#fff;border-radius:4px;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}.widget-hslider .ui-slider{border:0 !important;background:none !important;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}.widget-hslider .ui-slider .ui-slider-handle{width:14px !important;height:28px !important;margin-top:-8px !important}
 .widget-vslider{padding-bottom:8px;overflow:visible;width:5px;max-width:5px;height:250px;margin-left:12px;border:1px solid #ccc;background:#fff;border-radius:4px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}.widget-vslider .ui-slider{border:0 !important;background:none !important;margin-left:-4px;margin-top:5px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}.widget-vslider .ui-slider .ui-slider-handle{width:28px !important;height:14px !important;margin-left:-9px}
-.widget-text{width:350px;margin:0 !important}
+.widget-text{width:350px;margin-bottom:0}
 .widget-listbox{width:364px;margin-bottom:0}
-.widget-numeric-text{width:150px;margin:0 !important}
+.widget-numeric-text{width:150px}
 .widget-progress{width:363px}.widget-progress .bar{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
 .widget-combo-btn{min-width:138px;}
-.widget-box{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start}
-.widget-hbox{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
-.widget-hbox-single{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;height:30px}
-.widget-vbox{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}
-.widget-vbox-single{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;width:30px}
+.widget-box{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.widget-hbox{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
+.widget-hbox-single{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;height:30px}
+.widget-vbox{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch}
+.widget-vbox-single{margin:5px;-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;width:30px}
 .widget-modal{overflow:hidden;position:absolute !important;top:0;left:0;margin-left:0 !important}
 .widget-modal-body{max-height:none !important}
-.widget-container{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start}
-.widget-radio-box{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;display:flex;flex-direction:column;align-items:stretch;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding-top:4px}
+.widget-container{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .docked-widget-modal{overflow:hidden;position:relative !important;top:0 !important;left:0 !important;margin-left:0 !important}
 body{background-color:#fff}
 body.notebook_app{overflow:hidden}
 span#notebook_name{height:1em;line-height:1em;padding:3px;border:none;font-size:146.5%}
 div#notebook_panel{margin:0 0 0 0;padding:0;-webkit-box-shadow:0 -1px 10px rgba(0,0,0,0.1);-moz-box-shadow:0 -1px 10px rgba(0,0,0,0.1);box-shadow:0 -1px 10px rgba(0,0,0,0.1)}
-div#notebook{font-size:14px;line-height:20px;overflow-y:scroll;overflow-x:auto;width:100%;padding:1em 0 1em 0;margin:0;border-top:1px solid #ababab;outline:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+div#notebook{overflow-y:scroll;overflow-x:auto;width:100%;padding:1em 0 1em 0;margin:0;border-top:1px solid #ababab;outline:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 div.ui-widget-content{border:1px solid #ababab;outline:none}
 pre.dialog{background-color:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:.4em;padding-left:2em}
 p.dialog{padding:.2em}
@@ -1517,7 +1515,7 @@ pre,code,kbd,samp{white-space:pre-wrap}
 #fonttest{font-family:monospace}
 p{margin-bottom:0}
 .end_space{height:200px}
-.celltoolbar{border:thin solid #cfcfcf;border-bottom:none;background:#eee;border-radius:3px 3px 0 0;width:100%;-webkit-box-pack:end;height:22px;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse;flex-direction:row-reverse}
+.celltoolbar{border:thin solid #cfcfcf;border-bottom:none;background:#eee;border-radius:3px 3px 0 0;width:100%;-webkit-box-pack:end;height:22px;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse;flex-direction:column-reverse}
 .ctb_hideshow{display:none;vertical-align:bottom;padding-right:2px}
 .celltoolbar>div{padding-top:0}
 .ctb_global_show .ctb_show.ctb_hideshow{display:block}
@@ -1542,7 +1540,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.231em;color:#000;background-color:#f7f7f7;padding:.4em}
 .shortcut_key{display:inline-block;width:15ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block}
 span#save_widget{padding:0 5px;margin-top:12px}
@@ -1701,17 +1699,15 @@ div.output_prompt {
 <div class="slides">
 <div style=display:none>
     
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
 In&nbsp;[1]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span><span class="n">SVG</span>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 </pre></div>
 
-</div>
 </div>
 </div>
 
@@ -1720,17 +1716,17 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Comparative-transcriptomics-of-blood-feeding-in-midguts-of-three-disease-vector-mosquito-species"><font color="#A86E12">Comparative transcriptomics of blood-feeding in midguts of three disease-vector mosquito species</font><a class="anchor-link" href="#Comparative-transcriptomics-of-blood-feeding-in-midguts-of-three-disease-vector-mosquito-species">&#182;</a></h1>
+<h1 id="Awesome-Title"><font color="#A86E12">Awesome Title</font><a class="anchor-link" href="#Awesome-Title">&#182;</a></h1>
 </div>
 </div>
 </div>
 
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1741,7 +1737,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1751,7 +1747,7 @@ In&nbsp;[1]:
 </div>
 </div>
 
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1763,176 +1759,58 @@ In&nbsp;[1]:
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="acknowledgments">Acknowledgments</h2>
+<h2 id="acknowldgements">Acknowldgements</h2>
 </div>
 </div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Dr. Anthony James</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Dr. Osvaldo Marinotti</li>
-<li>Dr. Nijole Jasinskiene</li>
-<li>Dr. Mariangela Bonizzoni</li>
-<li>Dr. Rebeca Carballar</li>
-<li>Dr. David Brown</li>
+<li>Great </li>
 </ul>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vanessa Macias</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Everyone in the Insectary</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Dr. Xiaohui Xie</p>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Dr. Donald Senear</p>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>My beautiful</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>smart</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>strong</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>funny</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="immensely-supportive">immensely supportive<a class="anchor-link" href="#immensely-supportive">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>wife Dr. Sarah E. Bione-Dunn</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>My wonderful son Liam Dunn</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Funding Sources:</p>
 <ul>
-<li>NIH/NLM BIT Training Grant</li>
-<li>PSWRCE</li>
+<li>People </li>
 </ul>
 </div>
 </div>
-</div></section>
+</div>
+    </div><div class="fragment">
+    
+<div class="input">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Everywhere </li>
+</ul>
+</div>
+</div>
+</div>
+    </div></section>
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1943,7 +1821,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1954,7 +1832,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1965,7 +1843,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1978,7 +1856,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1991,7 +1869,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2002,7 +1880,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2013,7 +1891,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2023,21 +1901,21 @@ In&nbsp;[1]:
 </div>
 </div>
 
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <figure>
 <center>
-<img src="general_files/denv_1_to_4.png" width="500" />
+<img src="general_files/denv_1_to_4.png" width="580" />
 </center>
 </figure>
 </div>
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2048,7 +1926,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2059,7 +1937,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2070,7 +1948,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2084,7 +1962,7 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2094,7 +1972,7 @@ In&nbsp;[1]:
 </div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2106,7 +1984,7 @@ In&nbsp;[1]:
 
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2117,7 +1995,7 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2128,7 +2006,7 @@ In&nbsp;[1]:
 </div>
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2139,19 +2017,19 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="feeding-on-blood">feeding on blood<a class="anchor-link" href="#feeding-on-blood">&#182;</a></h4>
+<h4 id="a-fancy-name-for-feeding-on-blood">a fancy name for feeding on blood<a class="anchor-link" href="#a-fancy-name-for-feeding-on-blood">&#182;</a></h4>
 </div>
 </div>
 </div>
 
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2165,7 +2043,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2176,7 +2054,7 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2187,7 +2065,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2198,7 +2076,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2209,7 +2087,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2220,7 +2098,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2231,7 +2109,7 @@ In&nbsp;[1]:
 </div>
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2248,7 +2126,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2259,7 +2137,7 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2270,7 +2148,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2281,7 +2159,7 @@ In&nbsp;[1]:
 </div>
     </div><aside class="notes">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2294,12 +2172,12 @@ In&nbsp;[1]:
 </div>
     </aside></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="These-weak-points-present-targets-for-designing-transgenic-mosquitoes-that-are-able-to-block-the-pathogen-from-reaching-the-next-human-host.">These weak points present <font color="#5791ED">targets</font> for designing transgenic mosquitoes that are able to block the pathogen from reaching the next human host.<a class="anchor-link" href="#These-weak-points-present-targets-for-designing-transgenic-mosquitoes-that-are-able-to-block-the-pathogen-from-reaching-the-next-human-host.">&#182;</a></h1>
+<h1 id="These-weak-points-present-targets-for-designing-transgenic-mosquitoes-that-are-able-to-block-the-pathogen-from-reachign-the-next-human-host.">These weak points present <font color="#5791ED">targets</font> for designing transgenic mosquitoes that are able to block the pathogen from reachign the next human host.<a class="anchor-link" href="#These-weak-points-present-targets-for-designing-transgenic-mosquitoes-that-are-able-to-block-the-pathogen-from-reachign-the-next-human-host.">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -2307,7 +2185,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2318,7 +2196,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2329,66 +2207,24 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are four fundamental elements needed for a successful transgenic vector control product</p>
+<ol>
+<li>genomic introduction of <font color="#5791ED">heritible traits</font></li>
+<li>development of effective <font color="#5791ED">anti-pathogen gene construct</font></li>
+<li>genetic <font color="#5791ED">control of expression pattern</font> of gene construct </li>
+<li>strategy to bring gene construct to <font color="#5791ED">near-fixation frequencies</font> in native populations</li>
+</ol>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-genomic-introduction-of-heritable-traits">1. genomic introduction of <font color="#5791ED">heritable traits</font><a class="anchor-link" href="#1.-genomic-introduction-of-heritable-traits">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-development-of-effective-anti-pathogen-gene-construct">2. development of effective <font color="#5791ED">anti-pathogen gene construct</font><a class="anchor-link" href="#2.-development-of-effective-anti-pathogen-gene-construct">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-genetic-control-of-expression-pattern-of-gene-construct">3. genetic <font color="#5791ED">control of expression pattern</font> of gene construct<a class="anchor-link" href="#3.-genetic-control-of-expression-pattern-of-gene-construct">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-strategy-to-bring-gene-construct-to-near-fixation-frequencies-in-native-populations">4. strategy to bring gene construct to <font color="#5791ED">near-fixation frequencies</font> in native populations<a class="anchor-link" href="#4.-strategy-to-bring-gene-construct-to-near-fixation-frequencies-in-native-populations">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2400,7 +2236,7 @@ In&nbsp;[1]:
 
     </div><aside class="notes">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2409,22 +2245,20 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-    </aside></section>
-    </section><section>
-    <section>
+    </aside></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Genetic-control-of-expression-patterns"><font color="#A86E12">Genetic control of expression patterns</font><a class="anchor-link" href="#Genetic-control-of-expression-patterns">&#182;</a></h1>
+<h1 id="Genetic-control-of-expression-patterns">Genetic control of expression patterns<a class="anchor-link" href="#Genetic-control-of-expression-patterns">&#182;</a></h1>
 </div>
 </div>
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2434,7 +2268,7 @@ In&nbsp;[1]:
 </div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2445,7 +2279,7 @@ In&nbsp;[1]:
 </div>
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2455,7 +2289,7 @@ In&nbsp;[1]:
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2464,7 +2298,7 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2479,7 +2313,7 @@ In&nbsp;[1]:
 </div>
 </div><aside class="notes">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2497,7 +2331,7 @@ In&nbsp;[1]:
 </div>
     </aside></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2505,11 +2339,9 @@ In&nbsp;[1]:
 <h2 id="typical-method-for-characterizing-cre-and-crm-activity-by-experimentation-font-color-5791ed-promoter-bashing-font-">Typical method for characterizing CRE and CRM activity by experimentation: <font color="#5791ED">promoter bashing</font>.</h2>
 </div>
 </div>
-</div></section>
-    </section><section>
-    <section>
+</div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2520,14 +2352,14 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <figure>
 <center>
-<img src="general_files/Promoter_bashing.svg" width=100 />
+<img src="general_files/Promoter_bashing.svg" width="500" />
 <figcaption>An illustration of promoter bashing. <a href="http://en.wikipedia.org/wiki/File:Promoter_bashing.svg">RC Howe</a>
 </figcaption>
 </center>
@@ -2536,7 +2368,7 @@ In&nbsp;[1]:
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2546,7 +2378,7 @@ In&nbsp;[1]:
 </div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2559,7 +2391,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2570,9 +2402,9 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-    </div></section><section>
+    </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2581,9 +2413,10 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-</section><section>
+
+    </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2592,9 +2425,9 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-</section><section>
+<div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2603,9 +2436,10 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-</section><section>
+
+    </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2614,117 +2448,26 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="And-if-it-works-80%-as-well-as-needed?">And if it works <font color="#5791ED">80%</font> as well as needed?<a class="anchor-link" href="#And-if-it-works-80%-as-well-as-needed?">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="With-no-idea-of-what-to-adjust">With no idea of what to adjust<a class="anchor-link" href="#With-no-idea-of-what-to-adjust">&#182;</a></h3>
-</div>
-</div>
-</div>
 
-    </div><div class="fragment">
+    </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="the-promoter-is-usually-abandoned-and-the-process-starts-all-over.">the promoter is usually abandoned and the process <font color="#5791ED">starts all over</font>.<a class="anchor-link" href="#the-promoter-is-usually-abandoned-and-the-process-starts-all-over.">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="There-must-be-another-way-to-predict-active-CREs-and-CRMs-of-promoters-in-non-model-systems..."><font color="#A86E12">There must be another way to predict active CREs and CRMs of promoters in non-model systems...</font><a class="anchor-link" href="#There-must-be-another-way-to-predict-active-CREs-and-CRMs-of-promoters-in-non-model-systems...">&#182;</a></h1>
+<h1 id="What-if-it-works-80%-as-well-as-needed?">What if it works <font color="#5791ED">80%</font> as well as needed?<a class="anchor-link" href="#What-if-it-works-80%-as-well-as-needed?">&#182;</a></h1>
 </div>
 </div>
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Promoter-bashing-works-by-choosing-one-gene-and-asking-how-many-altered-versions-of-its-promoter-affect-the-expression-profile">Promoter bashing works by choosing <font color="#5791ED">one</font> gene and asking how many altered versions of its promoter affect the expression profile<a class="anchor-link" href="#Promoter-bashing-works-by-choosing-one-gene-and-asking-how-many-altered-versions-of-its-promoter-affect-the-expression-profile">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modern-high-throughput-sequencing-allows-us-to-measure-the-expression-profiles-of-virtually-every-gene-in-the-genome-at-once">Modern high throughput sequencing allows us to measure the expression profiles of virtually <font color="#5791ED">every gene in the genome</font> at once<a class="anchor-link" href="#Modern-high-throughput-sequencing-allows-us-to-measure-the-expression-profiles-of-virtually-every-gene-in-the-genome-at-once">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="If-we-collected--every-other-expression-profile-in-the-genome-that-is-similar-to-our-original-target-profile">If we collected  <font color="#5791ED">every other expression profile</font> in the genome that is similar to our original target profile<a class="anchor-link" href="#If-we-collected--every-other-expression-profile-in-the-genome-that-is-similar-to-our-original-target-profile">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="we-could-then-search-all-the-associated-promoter-sequences-for-what-they-have-in-common">we could then search all the associated promoter sequences for <font color="#5791ED">what they have in common</font><a class="anchor-link" href="#we-could-then-search-all-the-associated-promoter-sequences-for-what-they-have-in-common">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="similar-expression-profile-does-not-necessarily-require-similar-regulatory-elements">similar expression profile <font color="#5791ED">does not</font> necessarily require similar regulatory elements<a class="anchor-link" href="#similar-expression-profile-does-not-necessarily-require-similar-regulatory-elements">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="use-other-information-to-attempt-to-filter-as-much-of-that-noise-out-of-the-gene/promter-sets">use <font color="#5791ED">other information</font> to attempt to filter as much of that noise out of the gene/promter sets<a class="anchor-link" href="#use-other-information-to-attempt-to-filter-as-much-of-that-noise-out-of-the-gene/promter-sets">&#182;</a></h3>
+<h3 id="With-no-idea-of-what-to-adjust,-the-promoter-is-abandoned-and-the-process-starts-all-over.">With no idea of what to adjust, the promoter is abandoned and the process <font color="#5791ED">starts all over</font>.<a class="anchor-link" href="#With-no-idea-of-what-to-adjust,-the-promoter-is-abandoned-and-the-process-starts-all-over.">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2732,7 +2475,42 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="There-must-be-another-way-to-predict-the-important-CREs-and-CRMs-of-promoters-in-non-model-systems..."><font color="#A86E12">There must be another way to predict the important CREs and CRMs of promoters in non-model systems...</font><a class="anchor-link" href="#There-must-be-another-way-to-predict-the-important-CREs-and-CRMs-of-promoters-in-non-model-systems...">&#182;</a></h1>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="input">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="!!-Bioinformatics-(gene-expression-of-MANY-promoters-at-once-rather-than-one-at-a-time-)"><font color="red">!!</font> Bioinformatics (gene expression of MANY promoters at once rather than one at a time )<a class="anchor-link" href="#!!-Bioinformatics-(gene-expression-of-MANY-promoters-at-once-rather-than-one-at-a-time-)">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section><section>
+    
+<div class="input">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="!!--Reduce-noise-by-focusing-on-genes-with-more-reason-to-be-associated-than-just-similar-expression-profiles"><font color="red">!!</font>  Reduce noise by focusing on genes with more reason to be associated than just similar expression profiles<a class="anchor-link" href="#!!--Reduce-noise-by-focusing-on-genes-with-more-reason-to-be-associated-than-just-similar-expression-profiles">&#182;</a></h3>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2743,7 +2521,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2754,19 +2532,19 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="In-other-words:-form-groupings-containing-as-few-&quot;incorrect&quot;-members-as-possible."><font color="#5791ED">In other words:</font> form groupings containing as few "incorrect" members as possible.<a class="anchor-link" href="#In-other-words:-form-groupings-containing-as-few-&quot;incorrect&quot;-members-as-possible.">&#182;</a></h3>
+<h3 id="In-other-words:-form-groupings-containing-as-few-&quot;incorrect&quot;-members-as-possible.">In other words: form groupings containing as few "incorrect" members as possible.<a class="anchor-link" href="#In-other-words:-form-groupings-containing-as-few-&quot;incorrect&quot;-members-as-possible.">&#182;</a></h3>
 </div>
 </div>
 </div>
 
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2777,7 +2555,7 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2790,7 +2568,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2803,20 +2581,20 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Compare promoter sequences for similarities of the presence of motifs that fit models of <font color="#5791ED">previously described CREs</font></li>
+<li>Compare promoter sequences for similarities of the presence of motifs that fit models of <font color="#5791ED">previously decribed CREs</font></li>
 </ul>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2829,7 +2607,7 @@ In&nbsp;[1]:
 </div>
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2840,7 +2618,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2853,7 +2631,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2864,7 +2642,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2875,7 +2653,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2892,7 +2670,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2903,7 +2681,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2914,7 +2692,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2925,7 +2703,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2936,7 +2714,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2947,7 +2725,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2958,7 +2736,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2969,7 +2747,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2984,7 +2762,7 @@ In&nbsp;[1]:
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2995,7 +2773,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3006,7 +2784,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3020,7 +2798,7 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3030,33 +2808,33 @@ In&nbsp;[1]:
 </div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>each yellow box represents a <font color="#5791ED">single command line execution</font>, with specific inputs and an output directory, that may take hours or <u>days</u> to complete before the user is able to enter the next command.</li>
+<li>each yellow box represents a <font color="#5791ED">single command line execution</font>, with specific inputs and an output direcory, that may take hours or <u>days</u> to complete before the user is able to enter the next command.</li>
 </ul>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>data management and <font color="#5791ED">record keeping</font> becomes a nightmare, <em>especially for biologists uncomfortable with the command line.</em></li>
+<li>data management and <font color="#5791ED">record keeping</font> becomes a nightmare, <em>especially for biologists uncomfortable with the commandline.</em></li>
 </ul>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3071,7 +2849,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3082,7 +2860,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3093,7 +2871,7 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3106,7 +2884,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3119,7 +2897,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3132,33 +2910,33 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>intelligently continue with the analysis if a branch of a run fails</li>
+<li>intelligently continue with the analysis if a single run fails</li>
 </ul>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>run multiple, complex <code>tophat</code>/<code>cufflinks</code> experiments using a single command</li>
+<li>run multiple, complex <code>tophat</code>/<code>cufflinks</code> experiments at once using a single command</li>
 </ul>
 </div>
 </div>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3171,7 +2949,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3184,7 +2962,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3197,7 +2975,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3210,7 +2988,7 @@ In&nbsp;[1]:
 </div>
     </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3225,7 +3003,7 @@ In&nbsp;[1]:
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3236,7 +3014,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3247,7 +3025,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3258,7 +3036,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3266,44 +3044,22 @@ In&nbsp;[1]:
 <p><code>$ [sudo] pip install blacktie</code></p>
 </div>
 </div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="blacktie-has-been-downloaded-over-500-in-the-last-month-alone"><code>blacktie</code> has been downloaded over 500 in the last month alone<a class="anchor-link" href="#blacktie-has-been-downloaded-over-500-in-the-last-month-alone">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section>
+</div></section>
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="~14,000-mRNA-abundance-profiles-in-each-of-three-species"><font color="#A86E12">~14,000 mRNA abundance profiles in each of three species</font><a class="anchor-link" href="#~14,000-mRNA-abundance-profiles-in-each-of-three-species">&#182;</a></h2>
+<h3 id="mRNA-abunance-profiles-for-~14,000-genes-in-three-species"><font color="#A86E12">mRNA abunance profiles for ~14,000 genes in three species</font><a class="anchor-link" href="#mRNA-abunance-profiles-for-~14,000-genes-in-three-species">&#182;</a></h3>
 </div>
 </div>
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="where-do-we-want-to-end-up?">where do we want to end up?<a class="anchor-link" href="#where-do-we-want-to-end-up?">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3314,12 +3070,12 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="automated-and-repeatable"><font color="#5791ED">automated</font> and <font color="#5791ED">repeatable</font><a class="anchor-link" href="#automated-and-repeatable">&#182;</a></h3>
+<h3 id="automated-and-repeatable">automated and repeatable<a class="anchor-link" href="#automated-and-repeatable">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -3327,7 +3083,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3338,7 +3094,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3355,7 +3111,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3366,7 +3122,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3379,7 +3135,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3390,7 +3146,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3405,7 +3161,7 @@ In&nbsp;[1]:
 </div>
 </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3422,7 +3178,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3433,7 +3189,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3444,7 +3200,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3455,7 +3211,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3466,7 +3222,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3477,7 +3233,7 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3488,18 +3244,18 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="others-have-arisen-or-disappeared-in-any-particular-species-since-their-divergence">others have <font color="#5791ED">arisen</font> or <font color="#5791ED">disappeared</font> in any particular species since their <a href="#/17/1">divergence</a><a class="anchor-link" href="#others-have-arisen-or-disappeared-in-any-particular-species-since-their-divergence">&#182;</a></h2>
+<h2 id="others-have-arisen-or-disappeared-in-any-particular-species-since-their-divergence">others have <font color="#5791ED">arisen</font> or <font color="#5791ED">disappeared</font> in any particular species since their <a href="#/15/1">divergence</a><a class="anchor-link" href="#others-have-arisen-or-disappeared-in-any-particular-species-since-their-divergence">&#182;</a></h2>
 </div>
 </div>
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3510,18 +3266,18 @@ In&nbsp;[1]:
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="5,101-genes-in-each-species-satisfied-the-4-way,-1-to-1-ortholog-requirement-and-were-retained"><font color="#5791ED">5,101 genes</font> in each species satisfied the 4-way, 1-to-1 ortholog requirement and were retained<a class="anchor-link" href="#5,101-genes-in-each-species-satisfied-the-4-way,-1-to-1-ortholog-requirement-and-were-retained">&#182;</a></h2>
+<h2 id="5,101-genes-in-each-species-statisfied-the-4-way,-1-to-1-ortholog-requirement-and-were-retained"><font color="#5791ED">5,101 genes</font> in each species statisfied the 4-way, 1-to-1 ortholog requirement and were retained<a class="anchor-link" href="#5,101-genes-in-each-species-statisfied-the-4-way,-1-to-1-ortholog-requirement-and-were-retained">&#182;</a></h2>
 </div>
 </div>
 </div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3532,7 +3288,7 @@ In&nbsp;[1]:
 </div>
 <div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3543,7 +3299,7 @@ In&nbsp;[1]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3552,9 +3308,9 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-    </div><div style=display:none>
+    </div></section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3563,26 +3319,14 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="no-detectable-gain-or-loss-of-copies-over-at-least-145-million-years-implies-evolutionary-stability">no detectable gain or loss of copies over at least <font color="#5791ED">145 million years</font> implies evolutionary stability<a class="anchor-link" href="#no-detectable-gain-or-loss-of-copies-over-at-least-145-million-years-implies-evolutionary-stability">&#182;</a></h3>
-</div>
-</div>
-</div>
 </section><section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="more-likely-to-have-conserved-function">more likely to have <font color="#5791ED">conserved function</font><a class="anchor-link" href="#more-likely-to-have-conserved-function">&#182;</a></h3>
+<h3 id="no-apparent-gain-or-loss-of-copies-over-at-least-145-million-years-implies-a-degree-of-evolutionary-stability">no apparent gain or loss of copies over at least <font color="#5791ED">145 million years</font> implies a <em>degree</em> of evolutionary stability<a class="anchor-link" href="#no-apparent-gain-or-loss-of-copies-over-at-least-145-million-years-implies-a-degree-of-evolutionary-stability">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -3590,7 +3334,7 @@ In&nbsp;[1]:
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3599,22 +3343,11 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="RNA-seq-as-described-before"><a href="#/11/2">RNA-seq as described before</a><a class="anchor-link" href="#RNA-seq-as-described-before">&#182;</a></h2>
-</div>
-</div>
-</div>
 </section>
     </section><section>
     <section>
     
-<div class="cell border-box-sizing text_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -3623,1953 +3356,20 @@ In&nbsp;[1]:
 </div>
 </div>
 </div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
+
+<div class="cell border-box-sizing code_cell">
+<div class="input">
 <div class="prompt input_prompt">
+In&nbsp;[]:
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Correlation-of-CRE-scanning-signature-between-ortholog-pairs">Correlation of CRE <font color="#5791ED">scanning signature</font> between ortholog pairs<a class="anchor-link" href="#Correlation-of-CRE-scanning-signature-between-ortholog-pairs">&#182;</a></h2>
-</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
 </div>
 </div>
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="scanning-signature:">scanning signature:<a class="anchor-link" href="#scanning-signature:">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>for a set of defined CRE motif models...</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>record all regions of a promoter that <a href="general_files/defense_talk/mast.html">fit a given CRE model</a> better than expected given the background sequences</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>weight each site by its positive log odds score</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>sum the weighted sites for each CRE model in a single promoter sequence</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>this gives each gene&#39;s promoter a vector of the counts for each CRE model <font color="#5791ED">weighted by the quality</font> of each site (<font color="#5791ED">scanning signature</font>)</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>pairs of promoter <font color="#5791ED">scanning signatures</font> can be compared to generate a score representing the similarity of the CRE make-up of the two</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="gFunc-based-comparative-analysis"><font color="#A86E12">gFunc-based comparative analysis</font><a class="anchor-link" href="#gFunc-based-comparative-analysis">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="gFunc:-graph-based-functional-genomics-framework"><font color="#5791ED">gFunc:</font> <font color="#A86E12">g</font>raph-based <font color="#A86E12">func</font>tional genomics framework<a class="anchor-link" href="#gFunc:-graph-based-functional-genomics-framework">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="based-on-an-existing,-well-maintained-network-graph-framework-called-networkx">based on an existing, well maintained network-graph framework called <code>networkx</code><a class="anchor-link" href="#based-on-an-existing,-well-maintained-network-graph-framework-called-networkx">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="uses-networkx-as-a-graph-database-backbone">uses <code>networkx</code> as a graph-database backbone<a class="anchor-link" href="#uses-networkx-as-a-graph-database-backbone">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="gFunc-provides-code-for-installing-common-genomic-data-types-into-the-graph-structure"><font color="#5791ED">gFunc</font> provides code for installing common genomic data-types into the graph structure<a class="anchor-link" href="#gFunc-provides-code-for-installing-common-genomic-data-types-into-the-graph-structure">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="a-convention-for-adding-new-data-types">a convention for adding new data-types<a class="anchor-link" href="#a-convention-for-adding-new-data-types">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="not-formally-released-yet">not formally released yet<a class="anchor-link" href="#not-formally-released-yet">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="The-graph-model"><font color="#A86E12">The graph model</font><a class="anchor-link" href="#The-graph-model">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="based-on-the-3-way,-1:1-ortholog-relationships">based on the 3-way, 1:1 ortholog-relationships<a class="anchor-link" href="#based-on-the-3-way,-1:1-ortholog-relationships">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/ortho-graph-model.svg" width="600" />
-<figcaption> Graph model of 3-way, 1:1 ortholog-relationships.</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/ortho-graph-node-data.svg" width="600" />
-<figcaption> Data stored in the nodes.</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/ortho-graph-edge-data.svg" width="600" />
-<figcaption> Data stored in the edges.</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="The-Phylogenetic-Transcriptional-Correlation-Index"><font color="#A86E12">The Phylogenetic Transcriptional Correlation Index</font><a class="anchor-link" href="#The-Phylogenetic-Transcriptional-Correlation-Index">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-$\mathrm{PTCI}-=-\left(-r_{x}-+-\frac{r_{t}}{2}-\right)-\cdot-w(d)$-"><center> $\mathrm{PTCI} = \left( r_{x} + \frac{r_{t}}{2} \right) \cdot w(d)$ </center><a class="anchor-link" href="#-$\mathrm{PTCI}-=-\left(-r_{x}-+-\frac{r_{t}}{2}-\right)-\cdot-w(d)$-">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>attempts to provide a metric that</p>
-<ul>
-<li>combines multiple pairwise Pearson correlation coefficients (<font color="#5791ED">$r$</font>)<ul>
-<li>relating to multiple comparison dimensions for each ortholog-pair </li>
-<li>$r_{x}$ is correlation of <font color="#5791ED">mAPs</font></li>
-<li>$r_{t}$ is correlation of <font color="#5791ED">CRE scanning signatures</font></li>
-</ul>
-</li>
-<li>weights it by the relative evolutionary divergence times of each pairwise comparison (<font color="#5791ED">$d$</font>)</li>
-<li><font color="#5791ED">$w$</font> is a scaling function that scales <font color="#5791ED">$d$</font> from millions of years to between $1.0$ and $1.1$</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><aside class="notes">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><font color="#5791ED">1 - 1.0</font> used to allow the evolutionary distance to <font color="#5791ED">affect the ranking</font> of an ortholog-set without having a <font color="#5791ED">dominating effect</font>.</li>
-<li>I explored other constraint settings, but this range appeared to be a good compromise (not shown).</li>
-</ul>
-</div>
-</div>
-</div>
-    </aside></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="$r_{t}$-is-a-comparison-of-non-experimental-data">$r_{t}$ is a comparison of <font color="#5791ED">non-experimental data</font><a class="anchor-link" href="#$r_{t}$-is-a-comparison-of-non-experimental-data">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="it-should-not-be-&quot;depended-on&quot;-as-much-as-$r_{x}$">it should not be "depended on" as much as $r_{x}$<a class="anchor-link" href="#it-should-not-be-&quot;depended-on&quot;-as-much-as-$r_{x}$">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-$r_{x}-+-\frac{r_{t}}{2}$-"><center> $r_{x} + \frac{r_{t}}{2}$ </center><a class="anchor-link" href="#-$r_{x}-+-\frac{r_{t}}{2}$-">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<img src="general_files/defense_talk/thesis-xprn-tfbs.svg" width="500"  />
-
-
-<img src="general_files/defense_talk/thesis-xprn-scaled-tfbs.svg" width="500"  />
-</center>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/ortho-graph-ptci.svg" width="600" />
-<figcaption> PTCI example.</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="gFunc-mediated-filtering-of-ortholog-sets"><font color="#A86E12">gFunc mediated filtering of ortholog sets</font><a class="anchor-link" href="#gFunc-mediated-filtering-of-ortholog-sets">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Big-picture-again"><a href="#/15/1">Big picture again</a><a class="anchor-link" href="#Big-picture-again">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Three-step-process:">Three step process:<a class="anchor-link" href="#Three-step-process:">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.--PTCI-calculations-for-all-3-way-ortholog-sets">1.  PTCI calculations for all 3-way ortholog sets<a class="anchor-link" href="#1.--PTCI-calculations-for-all-3-way-ortholog-sets">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Estimate-a-false-discovery-rate-(FDR)-by-recalculating-the-PTCI-many-times-with-randomly-assigned-3-way-ortholog-memberships">2. Estimate a false discovery rate (<font color="#5791ED">FDR</font>) by recalculating the PTCI many times with randomly assigned 3-way ortholog memberships<a class="anchor-link" href="#2.-Estimate-a-false-discovery-rate-(FDR)-by-recalculating-the-PTCI-many-times-with-randomly-assigned-3-way-ortholog-memberships">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Retain-3-way-orthologs-with-combined-PTCI-greater-than-or-equal-to-FDR-threshold">3. Retain 3-way orthologs with combined PTCI greater than or equal to FDR threshold<a class="anchor-link" href="#3.-Retain-3-way-orthologs-with-combined-PTCI-greater-than-or-equal-to-FDR-threshold">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ortholog-sets-were-filtered-using-two-CRE-model-sets.">Ortholog sets were filtered using <font color="#5791ED">two</font> CRE model sets.<a class="anchor-link" href="#Ortholog-sets-were-filtered-using-two-CRE-model-sets.">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="a-general-set-of-126-insect-CRE-models">a <font color="#5791ED">general set</font> of 126 insect CRE models<a class="anchor-link" href="#a-general-set-of-126-insect-CRE-models">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="a-focused-set-of-12-CRE-models">a <font color="#5791ED">focused set</font> of 12 CRE models<a class="anchor-link" href="#a-focused-set-of-12-CRE-models">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="linked-to-the-ecdysone-(20E)-regulatory-program-which-is-involved-in-transcriptional-changes-resulting-from-bloodfeeding">linked to the ecdysone (<font color="#5791ED">20E</font>) regulatory program which is involved in transcriptional changes resulting from bloodfeeding<a class="anchor-link" href="#linked-to-the-ecdysone-(20E)-regulatory-program-which-is-involved-in-transcriptional-changes-resulting-from-bloodfeeding">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="the-union-of-3-way-ortholog-sets-from-the-general-set-and-the-focused-set-filtering-runs-were-retained-for-further-characterization">the <font color="#5791ED">union</font> of 3-way ortholog sets from the <font color="#5791ED">general set</font> and the <font color="#5791ED">focused set</font> filtering runs were retained for further characterization<a class="anchor-link" href="#the-union-of-3-way-ortholog-sets-from-the-general-set-and-the-focused-set-filtering-runs-were-retained-for-further-characterization">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="PTCI-results-from-the-general-set"><font color="#A86E12">PTCI results from the general set</font><a class="anchor-link" href="#PTCI-results-from-the-general-set">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="First-without-the-3-way-ortholog-combined-PTCI">First <font color="#5791ED">without</font> the 3-way ortholog combined PTCI<a class="anchor-link" href="#First-without-the-3-way-ortholog-combined-PTCI">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="each-pairwise-ortholog-separately">each pairwise ortholog <a href="#/22/2">separately</a><a class="anchor-link" href="#each-pairwise-ortholog-separately">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/dist_hist/ins_pairwise_ptci_hist.svg" width="600" />
-<figcaption> Pairwise PTCI distributions (<font color="#5791ED">general CRE set</font>).</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/dist_hist/ins_pairwise_ptci_cum_hist.svg" width="600" />
-<figcaption> Pairwise PTCI cummulative distributions (<font color="#5791ED">general CRE set</font>).</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/dist_hist/ins_pairwise_ptci_fdr.svg" width="600" />
-<figcaption> Pairwise PTCI vs FDR  (<font color="#5791ED">general CRE set</font>).</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Now-what-do-we-get-when-we-incorporate-the-3-way-ortholog-relationship?">Now what do we get when we incorporate the 3-way ortholog relationship?<a class="anchor-link" href="#Now-what-do-we-get-when-we-incorporate-the-3-way-ortholog-relationship?">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/dist_hist/ins_mean_ptci_fdr.svg" width="600" />
-<figcaption> Combined PTCI vs FDR  (<font color="#5791ED">general CRE set</font>).</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="PTCI-results-from-the-focused-set"><font color="#A86E12">PTCI results from the focused set</font><a class="anchor-link" href="#PTCI-results-from-the-focused-set">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/dist_hist/ecr_pairwise_ptci_fdr.svg" width="600" />
-<figcaption> Pairwise PTCI vs FDR  (<font color="#5791ED">focused CRE set</font>).</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/dist_hist/ecr_mean_ptci_fdr.svg" width="600" />
-<figcaption> Combined PTCI vs FDR  (<font color="#5791ED">focused CRE set</font>).</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-combined-PTCI-threshold-of-0.95-was-used-as-the-filter-threshold-in-both-the-general-and-focused-runs">A combined PTCI threshold of 0.95 was used as the filter threshold in both the <font color="#5791ED">general</font> and <font color="#5791ED">focused</font> runs<a class="anchor-link" href="#A-combined-PTCI-threshold-of-0.95-was-used-as-the-filter-threshold-in-both-the-general-and-focused-runs">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="In-both-cases-it-resulted-in-an-FDR-of-~15%">In both cases it resulted in an FDR of <font color="#5791ED">~15%</font><a class="anchor-link" href="#In-both-cases-it-resulted-in-an-FDR-of-~15%">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="666-genes-were-retained-for-the-general-set"><font color="#5791ED">666</font> genes were retained for the <font color="#5791ED">general set</font><a class="anchor-link" href="#666-genes-were-retained-for-the-general-set">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="708-genes-were-retained-for-the-focused-set"><font color="#5791ED">708</font> genes were retained for the <font color="#5791ED">focused set</font><a class="anchor-link" href="#708-genes-were-retained-for-the-focused-set">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="the-union-of-the-two-sets-contained-930-genes">the <font color="#5791ED">union</font> of the two sets contained <font color="#5791ED">930</font> genes<a class="anchor-link" href="#the-union-of-the-two-sets-contained-930-genes">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="310-from-each-species">310 from each species<a class="anchor-link" href="#310-from-each-species">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="the-intersection-(overlap)-contained-444">the <font color="#5791ED">intersection</font> (overlap) contained <font color="#5791ED">444</font><a class="anchor-link" href="#the-intersection-(overlap)-contained-444">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="66%-of-the-genes-retained-from-the-general-run">66% of the genes retained from the <font color="#5791ED">general</font> run<a class="anchor-link" href="#66%-of-the-genes-retained-from-the-general-run">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="63%-of-the-genes-retained-from-the-focused-run">63% of the genes retained from the <font color="#5791ED">focused</font> run<a class="anchor-link" href="#63%-of-the-genes-retained-from-the-focused-run">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div style=display:none>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="common-to-both">common to <font color="#5791ED">both</font><a class="anchor-link" href="#common-to-both">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Characterization-of-results-stage"><font color="#A86E12">Characterization of results stage</font><a class="anchor-link" href="#Characterization-of-results-stage">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Big-picture-again"><a href="#/15/1">Big picture again</a><a class="anchor-link" href="#Big-picture-again">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Functional-annotation-of-the-930-genes-in-the-union"><font color="#A86E12">Functional annotation of the 930 genes in the union</font><a class="anchor-link" href="#Functional-annotation-of-the-930-genes-in-the-union">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-might-these-genes-actually-do?">What might these genes <font color="#5791ED">actually do</font>?<a class="anchor-link" href="#What-might-these-genes-actually-do?">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Disclaimer..."><font color="#5791ED">Disclaimer...</font><a class="anchor-link" href="#Disclaimer...">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Very-few-mosquito-genes-have-been-experimentally-validated-with-respect-to-molecular-function"><font color="#5791ED">Very few</font> mosquito genes have been experimentally validated with respect to molecular function<a class="anchor-link" href="#Very-few-mosquito-genes-have-been-experimentally-validated-with-respect-to-molecular-function">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reality-for-most-non-&quot;model&quot;-organisms">Reality for most non-"model" organisms<a class="anchor-link" href="#Reality-for-most-non-&quot;model&quot;-organisms">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="So...">So...<a class="anchor-link" href="#So...">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="We-must-infer-function-through-similarity-of-gene-protein-sequence">We must <font color="#5791ED">infer</font> function through similarity of gene protein sequence<a class="anchor-link" href="#We-must-infer-function-through-similarity-of-gene-protein-sequence">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Argot2"><font color="#A86E12">Argot<sup>2</sup></font><a class="anchor-link" href="#Argot2">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<font color="#5791ED">Falda <em>et al.</em> (2012). <strong>Argot2: a large scale function prediction tool relying on semantic similarity of weighted Gene Ontology terms</strong>. BMC bioinformatics 
-
-doi:10.1186/1471-2105-13-S4-S14 </font>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-process:">The process:<a class="anchor-link" href="#The-process:">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-930-protein-sequences-are-compared-to-databases-of-well-characterized-proteins...">The 930 protein sequences are compared to databases of <font color="#5791ED">well characterized</font> proteins...<a class="anchor-link" href="#The-930-protein-sequences-are-compared-to-databases-of-well-characterized-proteins...">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Our-sequences-are-compared-using-peptide-BLAST-against-the-SwissProt-protein-sequence-database">Our sequences are compared using peptide BLAST against the SwissProt <font color="#5791ED">protein sequence</font> database<a class="anchor-link" href="#Our-sequences-are-compared-using-peptide-BLAST-against-the-SwissProt-protein-sequence-database">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="annotated-by-hand-with-evidence-types-known">annotated by hand with evidence types known<a class="anchor-link" href="#annotated-by-hand-with-evidence-types-known">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="most-with-at-least-some-experimental-evidence">most with at least some experimental evidence<a class="anchor-link" href="#most-with-at-least-some-experimental-evidence">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="They-are-also-compared-using-HMMER-against-the-Pfam-database-of-functional-domains">They are also compared using HMMER against the Pfam database of <font color="#5791ED">functional domains</font><a class="anchor-link" href="#They-are-also-compared-using-HMMER-against-the-Pfam-database-of-functional-domains">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="uses-hidden-Markov-models-of-annotated-functional-domains">uses hidden Markov models of annotated functional domains<a class="anchor-link" href="#uses-hidden-Markov-models-of-annotated-functional-domains">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="built-from-many-instances-of-each-domain">built from many instances of each domain<a class="anchor-link" href="#built-from-many-instances-of-each-domain">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-results-are-sent-to-the-Argot2-servers-to-be-mapped-onto-the-Gene-Ontology-(GO)-graph-of-hierarchical-terms">The results are sent to the <font color="#5791ED">Argot<sup>2</sup></font> servers to be mapped onto the Gene Ontology (<font color="#5791ED">GO</font>) graph of hierarchical terms<a class="anchor-link" href="#The-results-are-sent-to-the-Argot2-servers-to-be-mapped-onto-the-Gene-Ontology-(GO)-graph-of-hierarchical-terms">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Disclaimer..."><font color="#5791ED">Disclaimer...</font><a class="anchor-link" href="#Disclaimer...">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="the-following-is-a-bit-of-an-oversimplification...">the following is a bit of an oversimplification...<a class="anchor-link" href="#the-following-is-a-bit-of-an-oversimplification...">&#182;</a></h4>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-GO-terms-of-the-SwissProt/Pfam-entries-that-best-match-each-of-our-proteins-are-used-to-generate-a-total-score-(TS)-for-each-term-in-the-GO-hierarchy-as-they-relate-to-our-proteins">The GO terms of the <font color="#5791ED">SwissProt/Pfam</font> entries that best match each of our proteins are used to generate a total score (<font color="#5791ED">TS</font>) for each term in the GO hierarchy as they relate to our proteins<a class="anchor-link" href="#The-GO-terms-of-the-SwissProt/Pfam-entries-that-best-match-each-of-our-proteins-are-used-to-generate-a-total-score-(TS)-for-each-term-in-the-GO-hierarchy-as-they-relate-to-our-proteins">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-hierarchy-is-then-pruned,-leaving-the-&quot;best&quot;-terms">The hierarchy is then pruned, leaving the "best" terms<a class="anchor-link" href="#The-hierarchy-is-then-pruned,-leaving-the-&quot;best&quot;-terms">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-Argot2-developers-suggest-a-TS-threshold-of-around-200">The Argot<sup>2</sup> developers suggest a TS threshold of around 200<a class="anchor-link" href="#The-Argot2-developers-suggest-a-TS-threshold-of-around-200">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Argot2-was-the-highest-performer-in-a-recent-&quot;blinded&quot;-review-of-functional-annotation-methods">Argot<sup>2</sup> was the highest performer in a recent "blinded" review of functional annotation methods<a class="anchor-link" href="#Argot2-was-the-highest-performer-in-a-recent-&quot;blinded&quot;-review-of-functional-annotation-methods">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<font color="#5791ED">Radivojac <em>et al.</em> (2013). <strong>A large-scale evaluation of computational protein function prediction</strong>. Nature methods, 10(3), 221–7. 
-
-doi:10.1038/nmeth.2340</font>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="760-of-930-proteins-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-200"><font color="#5791ED">760</font> of 930 proteins where assigned at least one GO term with a TS of <font color="#5791ED">at least 200</font><a class="anchor-link" href="#760-of-930-proteins-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-200">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="452-of-930-proteins-(about-half)-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-2000"><font color="#5791ED">452</font> of 930 proteins (about half) where assigned at least one GO term with a TS of <font color="#5791ED">at least 2000</font><a class="anchor-link" href="#452-of-930-proteins-(about-half)-where-assigned-at-least-one-GO-term-with-a-TS-of-at-least-2000">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Grouping-the-930-by-mAP-similarity"><font color="#A86E12">Grouping the 930 by mAP similarity</font><a class="anchor-link" href="#Grouping-the-930-by-mAP-similarity">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Big-picture"><a href="#/15/1">Big picture</a><a class="anchor-link" href="#Big-picture">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="K-means-clustering-($k=23$)-was-applied-to-the-310-genes-from-An.-gambiae">K-means clustering (<font color="#5791ED">$k=23$</font>) was applied to the 310 genes from <font color="#5791ED"><em>An. gambiae</em></font><a class="anchor-link" href="#K-means-clustering-($k=23$)-was-applied-to-the-310-genes-from-An.-gambiae">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="partition-the-3-way,-1:1-ortholog-sets-based-on-mAP-similarity.">partition the 3-way, 1:1 ortholog sets based on mAP similarity.<a class="anchor-link" href="#partition-the-3-way,-1:1-ortholog-sets-based-on-mAP-similarity.">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="approximately-equidistant-evolutionary-divergence-to-both-other-species">approximately <a href="#/17/1">equidistant evolutionary divergence</a> to both other species<a class="anchor-link" href="#approximately-equidistant-evolutionary-divergence-to-both-other-species">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/23clusters_ptci_0_95_orthodb7.svg" width="900" />
-<figcaption><em>An. gambiae</em> clustered abundance profiles.</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Clusters-4,-6,-16,-and-22-were-characterized-further">Clusters 4, 6, 16, and 22 were characterized further<a class="anchor-link" href="#Clusters-4,-6,-16,-and-22-were-characterized-further">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="a-prominent-feature-in-each-mAP-is-the-dominant-change-in-abundance-from-0h-to-4h-post-bloodmeal--(PBM)">a prominent feature in each mAP is the dominant change in abundance from <font color="#5791ED">0h</font> to <font color="#5791ED">4h</font> post bloodmeal  (<font color="#5791ED">PBM</font>)<a class="anchor-link" href="#a-prominent-feature-in-each-mAP-is-the-dominant-change-in-abundance-from-0h-to-4h-post-bloodmeal--(PBM)">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Ag_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 4 in <em>An. gambiae</em> (<font color="#5791ED">up after 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Ag_downAfter4_cls6_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 6 in <em>An. gambiae</em> (<font color="#5791ED">down after 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Aa_upAt4_cls22_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 22 in <em>An. gambiae</em> (<font color="#5791ED">up at 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Ag_downAt4_cls16_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 16 in <em>An. gambiae</em> (<font color="#5791ED">down at 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="So-how-did-it-do?"><font color="#A86E12">So how did it do?</font><a class="anchor-link" href="#So-how-did-it-do?">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cluster-4:-up-after-4">Cluster 4: <font color="#5791ED">up after 4</font><a class="anchor-link" href="#Cluster-4:-up-after-4">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="rapid-and-sustained-increase-in-mRNA-abundance-putatively-triggered-by-the-bloodfeeding-stimulus."><font color="#5791ED">rapid</font> and <font color="#5791ED">sustained</font> increase in mRNA abundance putatively triggered by the <font color="#5791ED">bloodfeeding stimulus</font>.<a class="anchor-link" href="#rapid-and-sustained-increase-in-mRNA-abundance-putatively-triggered-by-the-bloodfeeding-stimulus.">&#182;</a></h3>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Expression-profiles">Expression profiles<a class="anchor-link" href="#Expression-profiles">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Ag_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 4 in <em>An. gambiae</em> (<font color="#5791ED">up after 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Aa_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 4 in <em>Ae. aegypti</em> (<font color="#5791ED">up after 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<center>
-<img src="general_files/defense_talk/Cq_upAfter4_cls4_Ag_target_FPKMs_vb_orthos.svg" width="600" />
-<figcaption> Cluster 4 in <em>Cx. quinquefasciatus</em> (<font color="#5791ED">up after 4</font>)</figcaption>
-</center>
-</figure>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Functional-annotations"><font color="#A86E12">Functional annotations</font><a class="anchor-link" href="#Functional-annotations">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Three-main-themes-present-in-the-Argot2-functional-annotation">Three main themes present in the Argot2 functional annotation<a class="anchor-link" href="#Three-main-themes-present-in-the-Argot2-functional-annotation">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="translation">translation<a class="anchor-link" href="#translation">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="secretory-processes">secretory processes<a class="anchor-link" href="#secretory-processes">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="peptide-metabolic-activities">peptide metabolic activities<a class="anchor-link" href="#peptide-metabolic-activities">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Additional-activities">Additional activities<a class="anchor-link" href="#Additional-activities">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="heme-management">heme management<a class="anchor-link" href="#heme-management">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="midgut-repair">midgut repair<a class="anchor-link" href="#midgut-repair">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Translation"><font color="#A86E12">Translation</font><a class="anchor-link" href="#Translation">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Directly-related-to-translation:">Directly related to translation:<a class="anchor-link" href="#Directly-related-to-translation:">&#182;</a></h3>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>parentheses indicate average TS value for that term in the cluster</em></p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="SRP-dependent-cotranslational-protein-targeting-to-membrane-(13254.87)">SRP-dependent cotranslational protein targeting to membrane (13254.87)<a class="anchor-link" href="#SRP-dependent-cotranslational-protein-targeting-to-membrane-(13254.87)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="regulation-of-translational-initiation-(4594.46)">regulation of translational initiation (4594.46)<a class="anchor-link" href="#regulation-of-translational-initiation-(4594.46)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="formation-of-translation-preinitiation-complex-(4524.89)">formation of translation preinitiation complex (4524.89)<a class="anchor-link" href="#formation-of-translation-preinitiation-complex-(4524.89)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="translational-initiation-(4288.82)">translational initiation (4288.82)<a class="anchor-link" href="#translational-initiation-(4288.82)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="translation-initiation-factor-activity-(18796.17)">translation initiation factor activity (18796.17)<a class="anchor-link" href="#translation-initiation-factor-activity-(18796.17)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="translation-(3777.61)">translation (3777.61)<a class="anchor-link" href="#translation-(3777.61)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Terms-indicative-of--translation:">Terms indicative of  translation:<a class="anchor-link" href="#Terms-indicative-of--translation:">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="proteasome-assembly-(3326.44)">proteasome assembly (3326.44)<a class="anchor-link" href="#proteasome-assembly-(3326.44)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ubiquitin-dependent-protein-catabolic-process-(1963.42)">ubiquitin-dependent protein catabolic process (1963.42)<a class="anchor-link" href="#ubiquitin-dependent-protein-catabolic-process-(1963.42)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="protein-ubiquitination-(1073.12)">protein ubiquitination (1073.12)<a class="anchor-link" href="#protein-ubiquitination-(1073.12)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="RNA-binding-(2799.62)">RNA binding (2799.62)<a class="anchor-link" href="#RNA-binding-(2799.62)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="transaminase-activity-(1686.97)">transaminase activity (1686.97)<a class="anchor-link" href="#transaminase-activity-(1686.97)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="transferase-activity-(319.82)">transferase activity (319.82)<a class="anchor-link" href="#transferase-activity-(319.82)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="does-this-make-sense?">does this make sense?<a class="anchor-link" href="#does-this-make-sense?">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Secretory-processes"><font color="#A86E12">Secretory processes</font><a class="anchor-link" href="#Secretory-processes">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<font color="#A86E12"><em>(anterograde and retrograde)</em></font>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Golgi-organization-(7289.78)">Golgi organization (7289.78)<a class="anchor-link" href="#Golgi-organization-(7289.78)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="ER-to-Golgi-vesicle-mediated-transport-(5914.05)">ER to Golgi vesicle-mediated transport (5914.05)<a class="anchor-link" href="#ER-to-Golgi-vesicle-mediated-transport-(5914.05)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="retrograde-vesicle-mediated-transport,-Golgi-to-ER-(2202.55)">retrograde vesicle-mediated transport, Golgi to ER (2202.55)<a class="anchor-link" href="#retrograde-vesicle-mediated-transport,-Golgi-to-ER-(2202.55)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="vesicle-fusion-with-Golgi-apparatus-(2141.47)">vesicle fusion with Golgi apparatus (2141.47)<a class="anchor-link" href="#vesicle-fusion-with-Golgi-apparatus-(2141.47)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="signal-recognition-particle-binding-(9157.88)">signal recognition particle binding (9157.88)<a class="anchor-link" href="#signal-recognition-particle-binding-(9157.88)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="endoplasmic-reticulum-signal-peptide-binding-(7943.20)">endoplasmic reticulum signal peptide binding (7943.20)<a class="anchor-link" href="#endoplasmic-reticulum-signal-peptide-binding-(7943.20)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="does-this-make-sense?">does this make sense?<a class="anchor-link" href="#does-this-make-sense?">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Peptide-metabolic-activities"><font color="#A86E12">Peptide metabolic activities</font><a class="anchor-link" href="#Peptide-metabolic-activities">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="proteolysis-(2453.58)">proteolysis (2453.58)<a class="anchor-link" href="#proteolysis-(2453.58)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="proteolysis-involved-in-cellular-protein-catabolic-process-(1972.16)">proteolysis involved in cellular protein catabolic process (1972.16)<a class="anchor-link" href="#proteolysis-involved-in-cellular-protein-catabolic-process-(1972.16)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="L-lysine-catabolic-process-(417.84)">L-lysine catabolic process (417.84)<a class="anchor-link" href="#L-lysine-catabolic-process-(417.84)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="lysine-catabolic-process-(414.33)">lysine catabolic process (414.33)<a class="anchor-link" href="#lysine-catabolic-process-(414.33)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="L-cysteine-catabolic-process-(378.10)">L-cysteine catabolic process (378.10)<a class="anchor-link" href="#L-cysteine-catabolic-process-(378.10)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="threonine-type-endopeptidase-activity-(1842.63)">threonine-type endopeptidase activity (1842.63)<a class="anchor-link" href="#threonine-type-endopeptidase-activity-(1842.63)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="aminopeptidase-activity-(1592.00)">aminopeptidase activity (1592.00)<a class="anchor-link" href="#aminopeptidase-activity-(1592.00)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="endopeptidase-activity-(1546.38)">endopeptidase activity (1546.38)<a class="anchor-link" href="#endopeptidase-activity-(1546.38)">&#182;</a></h4>
-</div>
-</div>
-</div>
-
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="peptidase-activity-(792.59)">peptidase activity (792.59)<a class="anchor-link" href="#peptidase-activity-(792.59)">&#182;</a></h4>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="does-this-make-sense?">does this make sense?<a class="anchor-link" href="#does-this-make-sense?">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Work"><font color="#A86E12">Future Work</font><a class="anchor-link" href="#Future-Work">&#182;</a></h1>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Perform-CRE/CRM-discovery">Perform CRE/CRM discovery<a class="anchor-link" href="#Perform-CRE/CRM-discovery">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Add-An.-stephensi-to-the-analysis">Add <em>An. stephensi</em> to the analysis<a class="anchor-link" href="#Add-An.-stephensi-to-the-analysis">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Explore-other-methods-for-clustering">Explore other methods for clustering<a class="anchor-link" href="#Explore-other-methods-for-clustering">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Once-a-set-of-CREs-is-discovered,-create-targeted-disruptions-to-validate-the-process-experimentally.">Once a set of CREs is discovered, create targeted disruptions to validate the process experimentally.<a class="anchor-link" href="#Once-a-set-of-CREs-is-discovered,-create-targeted-disruptions-to-validate-the-process-experimentally.">&#182;</a></h2>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Thank-you.">Thank you.<a class="anchor-link" href="#Thank-you.">&#182;</a></h1>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -5683,7 +3483,7 @@ Reveal.initialize({
     //mouseWheel: false,
 
     // Transition style
-    //transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+    transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
 
     // Transition speed
     //transitionSpeed: 'default', // default/fast/slow
