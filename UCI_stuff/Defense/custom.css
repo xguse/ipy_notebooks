@@ -1,0 +1,75 @@
+/*Some css fixes to use night theme with IPython slides*/
+body {
+background-color: #FDF6E3;
+}
+.reveal p {
+color: #073642;
+}
+.reveal figcaption {
+color: #073642;
+}
+.reveal ul, ol {
+color: #073642;
+}
+div.output_area pre {
+color: #073642;
+}
+div.output_stderr {
+background: #F00;
+}
+.reveal table th, .reveal table td {
+color: #073642;
+}
+
+.reveal .slides section .fragment.highlight-red,
+.reveal .slides section .fragment.highlight-current-red,
+.reveal .slides section .fragment.highlight-green,
+.reveal .slides section .fragment.highlight-current-green,
+.reveal .slides section .fragment.highlight-blue,
+.reveal .slides section .fragment.highlight-current-blue {
+	opacity: 1;
+}
+	.reveal .slides section .fragment.highlight-red.visible {
+		color: #ff2c2d
+	}
+	.reveal .slides section .fragment.highlight-green.visible {
+		color: #17ff2e;
+	}
+	.reveal .slides section .fragment.highlight-blue.visible {
+		color: #1b91ff;
+	}
+
+.reveal .slides section .fragment.highlight-current-red.current-fragment {
+	color: #ff2c2d
+}
+.reveal .slides section .fragment.highlight-current-green.current-fragment {
+	color: #17ff2e;
+}
+.reveal .slides section .fragment.highlight-current-blue.current-fragment {
+	color: #1b91ff;
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+/*.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #073642;
+  font-family: "League Gothic", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: none; }*/
+
+  pre code {
+  display: block; padding: 0.5em;
+  /*background: #3F3F3F;*/
+  background: #586E75;
+  color: #DCDCDC;
+}
