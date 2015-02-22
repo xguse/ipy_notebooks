@@ -1,0 +1,5 @@
+digraph G {
+observations [style=filled];
+lambda_dist;
+lambda_dist -> observations  [label=beta];
+}
