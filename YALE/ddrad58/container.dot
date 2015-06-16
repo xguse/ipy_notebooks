@@ -1,5 +1,11 @@
 digraph G {
-observations [style=filled];
-lambda_dist;
-lambda_dist -> observations  [label=beta];
+error;
+lambda;
+pred [shape=invtriangle];
+lambda -> pred  [label=lamb];
+error -> pred  [label=err];
+distance [style=filled];
+distance -> pred  [label=x];
+r2 [style=filled];
+pred -> r2  [label=mu];
 }
